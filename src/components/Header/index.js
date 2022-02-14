@@ -5,6 +5,7 @@ import {HeaderContainer,
         HeaderLogo,
         MobileMenu
         } from "./HeaderElements";
+import { useHistory } from "react-router-dom";
 import { LogOutBtn } from "./LogoutButton";
 import Logo from "../../images/Logo.jpg";
 import { VscMenu } from "react-icons/vsc";
@@ -12,12 +13,14 @@ import { VscMenu } from "react-icons/vsc";
 
 const Header = ({ setIsSidebarOpen, location }) => {
 
+    const history = useHistory();
     //Functions
     const toggle = () => setIsSidebarOpen(true);
 
     const handleLogOut = (e) => {
         e.preventDefault();
         localStorage.clear();
+        history.push('/');
         window.location.reload();
     }
 
