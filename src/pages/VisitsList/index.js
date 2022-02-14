@@ -25,7 +25,7 @@ const VisitsList = () => {
     //Use Effect
     useEffect(() => {
         setIsLoading(true);
-        axios.get('http://localhost:5000/visits')
+        axios.get('https://kalyect.herokuapp.com/visits')
             .then(res => setRecords(res.data))
             .then(setIsLoading(false))
             .catch(err => console.log(err))

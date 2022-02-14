@@ -59,7 +59,7 @@ const CTFormPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        axios.post('http://localhost:5000/newVisit', visitingCustomer)
+        axios.post('https://kalyect.herokuapp.com/newVisit', visitingCustomer)
             .then(res => {
                 console.log("Success!", res);
                 setIsLoading(false);
