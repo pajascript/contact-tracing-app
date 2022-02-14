@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {useHistory} from "react-router-dom";
 import { TiThumbsOk } from "react-icons/ti";
 import { HiOutlineHome } from "react-icons/hi";
-import { useSpring, animated } from "react-spring";
+// import { useSpring, animated } from "react-spring";
 
 const Background = styled.div`
     width: 100%;
@@ -71,19 +71,19 @@ export const Modal = ({ showModal, setShowModal }) => {
 
     const history = useHistory();
 
-    const animation = useSpring({
-        config: {
-            duration: 350
-        },
-        opacity: showModal ? 1 : 0,
-        transform: showModal ? `translateY(0)` : `translateY(-100%)`
-    });
+    // const animation = useSpring({
+    //     config: {
+    //         duration: 350
+    //     },
+    //     opacity: showModal ? 1 : 0,
+    //     transform: showModal ? `translateY(0)` : `translateY(-100%)`
+    // });
 
     return (
         <>
-        {showModal ? (
+        {showModal && (
             <Background>
-                <animated.div style={animation}>
+                {/* <animated.div style={animation}> */}
                     <ModalWrapper>
                         <OkIcon />
                         <ModalHeading>Your record has been logged succesfully!</ModalHeading>
@@ -96,9 +96,9 @@ export const Modal = ({ showModal, setShowModal }) => {
                             <HiOutlineHome />Back to home
                         </LinkBtn>
                     </ModalWrapper>
-                </animated.div>
+                {/* </animated.div> */}
             </Background>
-        ) : null }
+        ) }
         </>
     )
 };
