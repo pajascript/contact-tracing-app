@@ -13,7 +13,7 @@ import {DashboardContainer,
 import AboutSection from "../../components/About";
 import { withRouter } from "react-router-dom";
 import CT from "../../images/ct2.png";
-import { RoleContext } from "../../Helper/Context";
+import { RoleContext, UserStatusContext } from "../../Helper/Context";
 
 const Dashboard = () => {
 

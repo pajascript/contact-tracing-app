@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const VisitsContainer = styled.section`
     width: 100%;
     margin-top: 70px;
+    overflow: scroll;
 `;
 
 export const VisitsWrapper = styled.div`
@@ -29,7 +30,8 @@ export const Table = styled.table`
 
 export const THead = styled.thead`
     color: #fff;
-    background: #4b031d;
+    background: #6b2a00;
+    letter-spacing: 0.1rem;
 `;
 
 export const TR = styled.tr`

@@ -18,6 +18,18 @@ export const CTFormWrapper = styled.div`
     padding: 0 15px;
     border: 1px solid #aaa;
     padding: 60px 10px;
+
+    @media screen and (max-width: 402px) {
+        width: 320px;
+    }
+
+    @media screen and (max-width: 327px) {
+        width: 275px;
+    }
+
+    @media screen and (max-width: 301px) {
+        border: none;
+    }
 `;
 
 export const HeadingContainer = styled.div`

@@ -4,6 +4,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/Dashboard";
 import VisitsList from "./pages/VisitsList";
+import AdminPage from "./pages/AdminPage";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import CTFormPage from "./pages/NewForm";
@@ -21,6 +22,7 @@ const App = () => {
 
       <RoleContext.Provider value={{ isAdmin, setIsAdmin }} >
         <Header setIsSidebarOpen={setIsSidebarOpen} />
+
         <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
 
         <Switch>
@@ -32,6 +34,7 @@ const App = () => {
           <ProtectedRoute isAuth={isAuth} path='/home' exact component={Dashboard} />
           <ProtectedRoute isAuth={isAuth} path='/new' exact component={CTFormPage} />
           <ProtectedRoute isAuth={isAuth} path='/visits' exact component={VisitsList} />
+          <ProtectedRoute isAuth={isAuth} path='/admin' exact component={AdminPage} />
 
         </Switch>
       </RoleContext.Provider>

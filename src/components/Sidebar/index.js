@@ -17,9 +17,10 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
     return (
         <SidebarContainer isOpen={isSidebarOpen} >
             <CloseBtn onClick={toggle} ><RiCloseCircleFill /></CloseBtn>
-            <SidebarItems onClick={toggle} to='/home' >Home</SidebarItems>
-            <SidebarItems onClick={toggle} to='/new' >New Form</SidebarItems>
-            {isAdmin && <SidebarItems onClick={toggle} to='/visits' >Records</SidebarItems> }
+            <SidebarItems activeStyle={{background: '#ddd'}} onClick={toggle} to='/home' >Home</SidebarItems>
+            <SidebarItems activeStyle={{background: '#ddd'}} onClick={toggle} to='/new' >New Form</SidebarItems>
+            {isAdmin && <SidebarItems activeStyle={{background: '#ddd'}} onClick={toggle} to='/visits' >Records</SidebarItems> }
+            {isAdmin && <SidebarItems activeStyle={{background: '#ddd'}} onClick={toggle} to='/admin' >Administrators</SidebarItems> }
         </SidebarContainer>
     )
 };
