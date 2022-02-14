@@ -45,7 +45,7 @@ const LoginPage = ({ isAuth, setIsAuth }) => {
     const handleRegister = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        axios.post('http://localhost:5000/register', customerInfo)
+        axios.post('https://kalyect.herokuapp.com/register', customerInfo)
             .then(res => {
                 setIsAuth(true);
                 setIsLoading(false);
@@ -63,7 +63,7 @@ const LoginPage = ({ isAuth, setIsAuth }) => {
     const handleLogin = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        axios.post('http://localhost:5000/login', {email: customerInfo.email, password: customerInfo.password})
+        axios.post('https://kalyect.herokuapp.com/login', {email: customerInfo.email, password: customerInfo.password})
             .then(res => {
                 setIsAuth(true);
                 setIsLoading(false);
