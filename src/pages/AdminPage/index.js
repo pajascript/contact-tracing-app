@@ -15,7 +15,7 @@ const AdminPage = () => {
 
   useEffect(() => {
 
-    axios.get('http://localhost:5000/adminList')
+    axios.get('https://kalyect.herokuapp.com/adminList')
         .then(res => {
           console.log(res.data)
           setAdmins(res.data)
